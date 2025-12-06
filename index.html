@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new 2048</title>
+</head>
+<style>
+    body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        font-family: Arial, sans-serif;
+        color: #776e65;
+    }
+    .wrap {
+        transform: translate(-50%, -50%);
+        background-color: #bbada0;
+        border-radius: 6px;
+        padding: 15px;
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+
+    #simpleUI {
+        display: none;
+        white-space: pre-wrap;
+    }
+
+    #UI {
+        display: none;
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 1fr;
+            gap: 20px;               /* відстань між усіма блоками */
+            align-content: space-evenly; /* рівномірний розподіл по вертикалі */
+
+            .cell {
+                font-size: 55px;
+                line-height: 100px;
+                font-weight: bold;
+                text-align: center;
+                aspect-ratio: 1 / 1;
+                border-radius: 3px;
+                background-color: rgba(238, 228, 218, 0.35);
+            }
+
+            .cell.num-2 {
+                background-color: #eee4da;
+            }
+
+            .cell.num-4 {
+                background-color: #ede0c8;
+            }
+
+            .cell.num-8 {
+                color: #f9f6f2;
+                background-color: #f2b179;
+            }
+
+            .cell.num-16 {
+                color: #f9f6f2;
+                background-color: #f59563;
+            }
+
+            .cell.num-32 {
+                color: #f9f6f2;
+                background-color: #f67c5f;
+            }
+
+            .cell.num-64 {
+                color: #f9f6f2;
+                background-color: #f65e3b;
+            }
+
+            .cell.num-128 {
+                color: #f9f6f2;
+                background-color: #edcf72;
+            }
+
+            .cell.num-256 {
+                color: #f9f6f2;
+                background-color: #edcc61;
+            }
+        }
+    }
+    }
+
+</style>
+<body>
+<div class="wrap">
+    <div id="simpleUI"></div>
+    <div id="UI">
+        <div class="grid">
+            <template id="cell-item">
+                 <div class="cell"></div>
+            </template>
+        </div>
+    </div>
+</div>
+<button id="reset">
+    Почати знову
+</button>
+<script type="module" src="index.mjs"></script>
+</body>
+</html>
